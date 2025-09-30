@@ -1,15 +1,44 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>todo-redux</title>
-    <link href="./output.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body class="h-[100vh] bg-[#1b2535] flex items-center justify-center">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>todo-redux</title>
+  <link href="./output.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<style>
+  @media (max-width: 500px) {
+    .todo-box {
+      width: 95vw;
+    }
+    form {
+      flex-direction: column;
+      width: 100%;
+      gap: 15px;
+
+      :where(& > :not(:last-child)) {
+        margin-inline-start: calc(calc(var(--spacing) * 0) * var(--tw-space-x-reverse));
+        margin-inline-end: calc(calc(var(--spacing) * 0) * calc(1 - var(--tw-space-x-reverse)));
+      }
+    }
+    form input {
+      width: 100%;
+    }
+  }
+  @media (max-width: 360px) {
+    .list-show {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
+
+<body class="h-[100vh] bg-[#1b2535] flex items-center justify-center px-3">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

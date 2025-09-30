@@ -35,7 +35,7 @@ const App = () => {
   };
 
   return (
-    <div className="mx-auto px-6 pt-6 pb-8 bg-[#101727] rounded-[15px] shadow-md">
+    <div className="todo-box mx-auto px-6 pt-6 pb-8 bg-[#101727] rounded-[15px] shadow-md">
       <h1 className="text-2xl font-bold my-4 text-gray-100">Todo List</h1>
       <form className="flex space-x-2 mb-4">
         <input
@@ -64,7 +64,7 @@ const App = () => {
           return (
             <div
               key={i}
-              className="flex items-center justify-between p-2.5 bg-gray-800 rounded-md"
+              className="list-show gap-[15px] flex items-center justify-between p-2.5 bg-gray-800 rounded-md"
             >
               {index === i ? (
                 <input
