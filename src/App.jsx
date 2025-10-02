@@ -10,7 +10,7 @@ const App = () => {
   const dispatch = useDispatch();
   const todos = useSelector((store) => store.todos);
 
-  const handleAdd = (e) => {
+  let handleAdd = (e) => {
     e.preventDefault();
     if (input !== "") {
       dispatch({ type: "AddTodo", payload: input });
@@ -19,18 +19,18 @@ const App = () => {
       alert("Please Enter your task");
     }
   };
-  const handleClearAll = () => {
+  let handleClearAll = () => {
     dispatch({ type: "ClearTodo" });
   };
-  const handleEdit = (i) => {
+  let handleEdit = (i) => {
     setEditInput(todos[i]);
     setIndex(i);
   };
-  const handleSave = () => {
+  let handleSave = () => {
     dispatch({ type: "saveTodo", index: index, editValue: editInput });
     setIndex(null);
   };
-  const handleDelete = (i) => {
+  let handleDelete = (i) => {
     dispatch({ type: "DeleteTodo", payload: i });
   };
 
